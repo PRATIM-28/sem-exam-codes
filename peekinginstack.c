@@ -64,6 +64,7 @@ int peek(struct stack *pk,int i)
     if(pk->top-i+1<0)
     {
         printf("INVALID INPUT\n");
+        return -1;
     }
     else
     {
@@ -102,13 +103,6 @@ int main()
     push(sp,35);
     
     printf("%d",peek(sp,1));
-    
-    /*pop(sp);
-    pop(sp);
-    pop(sp);
-    pop(sp);
-    pop(sp);
-    pop(sp);*/
     
 return 0;
 }
