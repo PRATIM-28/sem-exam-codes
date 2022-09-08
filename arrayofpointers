@@ -1,0 +1,29 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int a[10]={1,2,3,4,5,6,7,8,9,10};
+    int *ptr[10];
+    int i=0,n;
+    for(i=0;i<10;i++)
+    {
+        ptr[i]=&a[i];
+    }
+    cout<<"enter the elements you want to search";
+    cin>>n;
+    
+    for(i=0;i<10;i++)
+    {
+        if(*ptr[i]==n)
+        {
+            cout<<"the elment "<<n<<" is present in the array";
+        }
+        else if(i==9)
+        {
+            cout<<"the element is not present in the array";
+        }
+    }
+    return 0;
+    
+}
