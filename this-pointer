@@ -1,0 +1,48 @@
+#include<iostream>
+#include<cstring>
+using namespace std;
+
+class person
+{
+    int age;
+    char name[20];
+    public:
+    person(char *y,int a)
+    {
+        age=a;
+        strcpy(name,y);
+    }
+    person & person :: greater(person & x)
+    {
+        if(age>x.age)
+        {
+            return x;
+        }
+        else
+        {
+            return *this;
+        }
+    }
+
+    void show()
+    {
+        cout<<"name="<<name<<" ";
+        cout<<"age="<<age<<endl;
+    }
+};
+
+int main()
+{
+    person p1("partha",19);
+    person p2("roshan",18);
+    person p3("divyani",19);
+    
+    person p=p1.greater(p2);
+    cout<<"the greater person in age between p1 and p2 is ";
+    p.show();
+    cout<<endl;
+    cout<<"the greatest person among three is";
+    p=p2.greater(p3);
+    p.show();
+    return 0;
+}
