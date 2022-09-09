@@ -1,0 +1,28 @@
+#include<iostream>
+
+using namespace std;
+
+
+void add(int a,int b)
+{
+    cout<<a<<'+'<<b<<"="<<(a+b)<<endl;
+}
+
+void substract(int a,int b)
+{
+    cout<<a<<'-'<<b<<'='<<(a-b)<<endl;
+}
+
+int main()
+{
+    void (*ppk)(int,int);
+    ppk=&add;
+    ppk(3,2);
+    ppk=&substract;
+    ppk(5,4);
+   /* ppk(3,2);
+    ppk=&substract(int,int);
+    ppk(5,2);*/
+    return 0;
+}
+
