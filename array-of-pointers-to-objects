@@ -1,0 +1,65 @@
+#include<iostream>
+using namespace std;
+
+class item 
+{
+    int code;
+    int price;
+    public:
+    void get_data(int a,int b)
+    {
+        code=a;
+        price=b;
+    }
+    void show_data()
+    {
+        cout<<"code:-"<<code<<" price:-"<<price<<endl;
+    }
+};
+
+int main()
+{
+    int x,y,c;
+    int n=1;
+    item *ptr[100];
+    do
+    {
+        ptr[n]=new item;
+        cout<<"enter the code";
+        cin>>x;
+        cout<<"enter the price";
+        cin>>y;
+        cout<<"the details of item no"<<n<<"are:-"<<endl;
+        ptr[n]->get_data(x,y);
+        ptr[n]->show_data();
+        n++;
+        cout<<"do you want to enter more items?"<<endl;
+        cout<<" press 1 if yes press 0 if no";
+        cin>>c;
+    }while(c);
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
