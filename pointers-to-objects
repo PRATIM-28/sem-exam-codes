@@ -1,0 +1,147 @@
+#include<iostream>
+
+using namespace std;
+
+class item
+{
+    protected:
+    int code;
+    int price;
+    public:
+    void get_data(int a,int b)
+    {
+        code=a;
+        price=b;
+    }
+    void show_data()
+    {
+        cout<<"the code of the item is::-"<<code<<" ";
+        cout<<"and price is ::--"<<price<<endl;
+    }
+};
+int main()
+{
+    int x,y;
+    item *p=new item;
+    cout<<"enter the code of the item";
+    cin>>x;
+    cout<<"enter the price of the item";
+    cin>>y;
+    p->get_data(x,y);
+    p->show_data();
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
