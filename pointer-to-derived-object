@@ -42,6 +42,10 @@ int main()
     ptr2->a=50;
     ptr2->b=100;
     ptr2->show();
+    
+    ((derived*)ptr)->a=10;
+    ((derived*)ptr)->b=20;
+    ((derived*)ptr)->show();
     return 0;
 }
 
