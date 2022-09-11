@@ -1,0 +1,20 @@
+//reading and displaying a line of text using get() and put() functions
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    char c;
+    int count=0;
+    cout<<"enter a line of text\n";
+    cin.get(c);
+    while(c!='\n')
+    {
+        cout.put(c);
+        count++;
+        cin.get(c);
+    }
+    cout<<"\nthe no of characters in the line is:-"<<count;
+    return 0;
+}
