@@ -1,0 +1,109 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct quenode
+{
+    int data;
+    struct quenode* next;
+};
+
+struct quenode* f=NULL;
+struct quenode* r=NULL;
+    
+int isfull(struct quenode* n)
+{
+    if(n==NULL)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+void print(struct quenode* f)
+{
+    while(f!=NULL)
+    {
+        printf("%d ",f->data);
+        f=f->next;
+    }
+}
+void enque(int val)
+{
+    struct quenode* n=(struct quenode*)malloc(sizeof(struct quenode));
+    if(isfull(n))
+    {
+        printf("queue is empty\n");
+    }
+    else
+    {
+        n->data=val;
+        n->next=NULL;
+        if(f==NULL)
+        {
+            f=r=n;
+            
+        }
+        else
+        {
+            r->next=n;
+            r=n;
+        }
+    }
+}
+
+int isempty()
+{
+    if(f==NULL)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
+}
+
+
+int deque()
+{
+    int val=-1;
+    struct quenode* ptr;
+    if(isempty())
+    {
+        printf("queue is empty\n");
+        return -1;
+    }
+    else
+    {
+        ptr=f;
+        f=f->next;
+        val=ptr->data;
+        free(ptr);
+        return val;
+    }
+}
+int main()
+{
+    enque(10);
+    enque(20);
+    enque(30);
+    enque(40);
+    enque(50);
+    print(f);
+    printf("\n");
+    printf("dequeing element %d \n",deque());
+    print(f);
+     printf("\n");
+     printf("dequeing element %d \n",deque());
+     printf("dequeing element %d \n",deque());
+     printf("dequeing element %d \n",deque());
+     printf("dequeing element %d \n",deque());
+     printf("dequeing element %d \n",deque());
+     print(f);
+    
+    
+    return 0;
+}
