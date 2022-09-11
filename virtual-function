@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+
+class base
+{
+    public:
+     void display()
+    {
+        printf("this is base display\n");
+    }
+    virtual void show()
+    {
+        printf("this is base show\n");
+    }
+};
+
+class derived:public base
+{
+    public:
+    void display()
+    {
+        printf("this is derived display\n");
+    }
+    void show()
+    {
+        printf("this is derived show\n");
+    }
+};
+int main()
+{
+    base b1;
+    base *bptr;
+    bptr=&b1;
+    bptr->display();
+    bptr->show();
+    
+    derived d1;
+    bptr=&d1;
+    bptr->display();
+    bptr->show();
+    
+    return 0;
+}
+
