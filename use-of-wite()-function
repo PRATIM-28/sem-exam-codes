@@ -1,0 +1,28 @@
+#include<iostream>
+#include<cstring>
+ using namespace std;
+ 
+ int main()
+ {
+    char * name="programming";
+    char * language="c++";
+    
+    int l1=strlen(name);
+    
+    for(int i=1;i<=l1;i++)
+    {
+        cout.write(name,i);
+        cout<<"\n";
+    }
+    
+    
+    for(int i=l1;i>=1;i--)
+    {
+        cout.write(name,i);
+        cout<<"\n";
+    }
+    
+    cout.write(language,3);cout<<"\n";
+    cout.write(name,(l1+1));
+    return 0;
+ }
