@@ -1,0 +1,40 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node
+{
+    int data;
+    struct node* left;
+    struct node* right;
+};
+
+int main()
+{
+    struct node* p=(struct node*)malloc(sizeof(struct node));
+    p->data=4;
+    p->left=NULL;
+    p->right=NULL;
+    
+    struct node* p1=(struct node*)malloc(sizeof(struct node));
+    p1->data=11;
+    p1->left=NULL;
+    p1->right=NULL;
+    
+    struct node* p2=(struct node*)malloc(sizeof(struct node));
+    p2->data=5;
+    p2->left=NULL;
+    p2->right=NULL;
+    
+    struct node* p3=(struct node*)malloc(sizeof(struct node));
+    p3->data=6;
+    p3->left=NULL;
+    p3->right=NULL;
+    
+    p->left=p1;
+    p->right=p2;
+    
+    p2->left=p3;
+    
+    return 0;
+    
+}
