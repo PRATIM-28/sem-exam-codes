@@ -1,0 +1,16 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    float n=275.5;
+    //cout.fill('*');
+    cout.setf(ios::fixed,ios::floatfield);
+    cout.setf(ios::internal,ios::adjustfield);
+    cout.precision(3);
+    cout.setf(ios::showpos);
+    cout.setf(ios::showpoint);
+    cout.width(10);
+    
+    cout<<n;
+}
