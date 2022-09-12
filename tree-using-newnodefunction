@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<stdlib.h>
+
+struct node
+{
+    int data;
+    struct node* left;
+    struct node* right;
+};
+
+struct node* newnode(int value)
+{
+    struct node*n=(struct node*)malloc(sizeof(struct node));
+    n->data=value;
+    n->left=NULL;
+    n->right=NULL;
+    return n;
+}
+
+int main()
+{
+    
+    struct node*p=newnode(4);
+    struct node* p1=newnode(11);
+    struct node* p2=newnode(12);
+    
+    
+    p->left=p1;
+    p->right=p2;
+    return 0;
+}
