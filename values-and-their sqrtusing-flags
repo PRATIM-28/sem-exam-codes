@@ -1,0 +1,35 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+    cout.setf(ios::left,ios::adjustfield);
+    cout.width(10);
+    cout<<"VALUES";
+    cout.setf(ios::right,ios::adjustfield);
+    cout.width(20);
+    cout<<"SQRT_OF_VALUES"<<"\n";
+    
+    cout.setf(ios::showpos);
+    cout.setf(ios::showpoint);
+    cout.precision(3);
+    cout.setf(ios::fixed,ios::floatfield);
+    cout.fill('.');
+    
+    for(int i=1;i<=10;i++)
+    {
+        cout.setf(ios::internal,ios::adjustfield);
+        cout.width(4);
+        cout<<i;
+        
+        
+        cout.setf(ios::right,ios::adjustfield);
+        cout.width(20);
+        cout<<sqrt(i);
+        
+        cout<<"\n";
+        
+    }
+    return 0;
+}
