@@ -1,0 +1,23 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+int main()
+{
+    int n;
+    cout<<"enter a number"<<endl;
+    cin>>n;
+    
+    cout<<"the hexadecimal,decimal and octal representation of the number is:-";
+    
+    cout.setf(ios::hex,ios::basefield);
+    cout<<n<<",";
+    
+    cout.setf(ios::dec,ios::basefield);
+    cout<<n<<"and";
+    
+    cout.setf(ios::oct,ios::basefield);
+    cout<<n<<"and";
+    
+    return 0;
+}
