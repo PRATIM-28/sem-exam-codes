@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int items[5]={10,8,5,25,6};
+    int price[5]={100,58,96,20,10};
+    int s=0;
+    
+    cout.width(5);
+    cout<<"ITEMS";
+    
+    cout.width(7);
+    cout<<"PRICE";
+    
+    cout.width(15);
+    cout<<"TOTAL VALUE"<<"\n";
+    
+    for(int i=0;i<5;i++)
+    {
+        cout.width(3);
+        cout<<items[i];
+        
+        cout.width(8);
+        cout<<price[i];
+        
+        int total_value=items[i]*price[i];
+        cout.width(12);
+        cout<<total_value;
+        
+        s=s+total_value;
+        
+        cout<<"\n";
+    }
+     cout<<"grand total ="<<s;
+    
+    return 0;
+}
