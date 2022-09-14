@@ -1,0 +1,24 @@
+#include<iostream>
+#include<iomanip>
+using namespace std;
+
+ostream & currency(ostream & output)
+{
+    output<<"Rs";
+    return output;
+}
+
+ostream & form(ostream & output)
+{
+    output.setf(ios::showpos);
+    output.setf(ios::showpoint);
+    output.precision(2);
+    output<<setw(10)<<setiosflags(ios::fixed);
+    output<<setfill('*');
+    return output;
+}
+
+int main()
+{
+    cout<<currency<<form<<1266.2;
+}
